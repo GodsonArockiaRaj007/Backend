@@ -18,7 +18,7 @@ console.log(b)
 
 let global = "global scoped";
 
-function scope() {
+const scope=()=> {
   let functional = "functional scoped";
 
   if (1) {

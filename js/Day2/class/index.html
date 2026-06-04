@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+
+        // argument passing and ternary operator
+        const details={
+            name:"Godson",
+            age:21,
+            course:"MERN"
+        }
+
+        const display=(details)=>{
+             details.age<18 ? console.log("not eligible vote"):console.log("eligible to vote")
+            return details;
+           
+        }
+
+        const result=display(details);
+        console.log(result);
+
+       
+
+
+        // Print only even numbers in arguments passed
+        const checkEven=(...nums)=>{
+                const even=nums.filter((e)=>e%2==0)
+                return even;
+        }
+        
+        const res= checkEven(1,2,3,4,5,6,7,8)
+        console.log(res)
+
+
+
+
+
+
+
+        // Task 1:
+
+        const values=(...a)=>{
+            let sum=0;
+            for(i of a)
+            {
+                sum+=i
+            }
+            return sum;
+        }
+        const total=values(1,2,3,4);
+        console.log(total)
+
+
+        // Task 2:
+        const update=(time)=>{
+                const newobj={
+                    ...details,
+                    time:time
+                }
+                return newobj;
+        }
+        const updatedObj=update("3pm")
+        console.log("Old object : ",details)
+        console.log("Updated object : ",updatedObj)
+
+    </script>
+</body>
+</html>
