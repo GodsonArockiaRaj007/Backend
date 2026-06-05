@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const addData=()=>{
+        //     let count=0;
+        //     return inner=()=>{
+        //         count++
+        //         console.log(count);
+                
+        //     }
+
+        // }
+        // const counter=addData()
+        // counter()
+        // counter()
+        // counter()
+
+
+
+
+
+
+        // const bank=()=>{
+        //     let balance=5000
+            
+            
+        //     return { 
+
+        //     withdraw:(value)=>{
+        //         if(balance<value)
+        //         {
+        //             console.log("Insufficient balance")
+        //         }
+        //         else{
+        //             return balance-=value
+        //         }
+        //     },
+        //     saving:(value)=>{
+        //        return balance+=value
+        //     },
+        //     balance:()=>{
+        //         return balance
+        //     }
+        //      };
+        // }
+
+        // const user1=bank()
+        // const deposit=user1.withdraw(500)
+        // console.log(deposit)
+        // const credit=user1.saving(1000)
+        // console.log(credit);
+        // const balance=user1.balance()
+        // console.log(balance);
+        
+        
+        const bank=(cb)=>{
+            cb()
+        }
+        const balance=()=>{
+            console.log("Balance")
+        }
+        const withdraw=()=>{
+            console.log("Withdraw");
+        }
+        const saving=()=>{
+            console.log("Savings");
+        }
+        bank(balance)
+        bank(withdraw)
+        bank(saving)
+
+
+
+    </script>
+</body>
+</html>
