@@ -1,3 +1,5 @@
+import "./App.css";
+
 import CreationMethods from "./components/CreationMethods";
 import SearchingMethods from "./components/SearchingMethods";
 import AddRemoveMethods from "./components/AddRemoveMethods";
@@ -9,8 +11,8 @@ import HigherOrderMethods from "./components/HigherOrderMethods";
 
 function App() {
   return (
-    <>
-      <h1>JavaScript Array Methods</h1>
+    <div className="app">
+      <h1 className="main-title">JavaScript Array Methods</h1>
 
       <CreationMethods />
       <SearchingMethods />
@@ -20,7 +22,7 @@ function App() {
       <SortMethods />
       <IterationMethods />
       <HigherOrderMethods />
-    </>
+    </div>
   );
 }
 

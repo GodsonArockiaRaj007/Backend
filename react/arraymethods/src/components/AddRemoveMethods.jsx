@@ -15,13 +15,13 @@ const AddRemoveMethods = () => {
             Adds one or more elements to the end of an array.
           </p>
 
-          <pre className="code">
+          <div className="code">
 {`const arr = [1, 2, 3];
 
 arr.push(4);
 
 console.log(arr);`}
-          </pre>
+          </div>
 
           <div className="output">
             Output: [1, 2, 3, 4]
@@ -36,13 +36,13 @@ console.log(arr);`}
             Removes the last element from an array.
           </p>
 
-          <pre className="code">
+          <div className="code">
 {`const arr = [1, 2, 3];
 
 arr.pop();
 
 console.log(arr);`}
-          </pre>
+          </div>
 
           <div className="output">
             Output: [1, 2]
@@ -57,13 +57,13 @@ console.log(arr);`}
             Adds one or more elements to the beginning of an array.
           </p>
 
-          <pre className="code">
+          <div className="code">
 {`const arr = [2, 3, 4];
 
 arr.unshift(1);
 
 console.log(arr);`}
-          </pre>
+          </div>
 
           <div className="output">
             Output: [1, 2, 3, 4]
@@ -78,13 +78,13 @@ console.log(arr);`}
             Removes the first element from an array.
           </p>
 
-          <pre className="code">
+          <div className="code">
 {`const arr = [1, 2, 3];
 
 arr.shift();
 
 console.log(arr);`}
-          </pre>
+          </div>
 
           <div className="output">
             Output: [2, 3]

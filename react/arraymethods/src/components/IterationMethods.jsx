@@ -15,13 +15,13 @@ const IterationMethods = () => {
             Iterates through an array using an index.
           </p>
 
-          <pre className="code">
+          <div className="code">
 {`const arr = [10, 20, 30];
 
 for(let i = 0; i < arr.length; i++){
   console.log(arr[i]);
 }`}
-          </pre>
+          </div>
 
           <div className="output">
             Output: 10 20 30
@@ -36,13 +36,13 @@ for(let i = 0; i < arr.length; i++){
             Iterates directly over the values of an array.
           </p>
 
-          <pre className="code">
+          <div className="code">
 {`const arr = [10, 20, 30];
 
 for(const value of arr){
   console.log(value);
 }`}
-          </pre>
+          </div>
 
           <div className="output">
             Output: 10 20 30
@@ -57,13 +57,13 @@ for(const value of arr){
             Iterates over the indexes of an array.
           </p>
 
-          <pre className="code">
+          <div className="code">
 {`const arr = [10, 20, 30];
 
 for(const index in arr){
   console.log(index);
 }`}
-          </pre>
+          </div>
 
           <div className="output">
             Output: 0 1 2
@@ -78,13 +78,13 @@ for(const index in arr){
             Executes a callback function for each element in the array.
           </p>
 
-          <pre className="code">
+          <div className="code">
 {`const arr = [10, 20, 30];
 
 arr.forEach(value => {
   console.log(value);
 });`}
-          </pre>
+          </div>
 
           <div className="output">
             Output: 10 20 30

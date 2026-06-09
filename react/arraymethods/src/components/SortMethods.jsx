@@ -15,13 +15,13 @@ const SortMethods = () => {
             Sorts the elements of an array in ascending order.
           </p>
 
-          <pre className="code">
+          <div className="code">
 {`const arr = [5, 2, 8, 1];
 
 arr.sort((a, b) => a - b);
 
 console.log(arr);`}
-          </pre>
+          </div>
 
           <div className="output">
             Output: [1, 2, 5, 8]
@@ -36,13 +36,13 @@ console.log(arr);`}
             Reverses the order of the elements in an array.
           </p>
 
-          <pre className="code">
+          <div className="code">
 {`const arr = [1, 2, 3, 4];
 
 arr.reverse();
 
 console.log(arr);`}
-          </pre>
+          </div>
 
           <div className="output">
             Output: [4, 3, 2, 1]

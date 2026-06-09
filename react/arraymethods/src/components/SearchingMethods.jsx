@@ -16,11 +16,11 @@ const SearchingMethods = () => {
             true or false.
           </p>
 
-          <pre className="code">
+          <div className="code">
 {`const arr = [10, 20, 30, 40];
 
 console.log(arr.includes(20));`}
-          </pre>
+          </div>
 
           <div className="output">
             Output: true
@@ -35,11 +35,11 @@ console.log(arr.includes(20));`}
             Returns the index of the first occurrence of an element.
           </p>
 
-          <pre className="code">
+          <div className="code">
 {`const arr = [10, 20, 30, 20];
 
 console.log(arr.indexOf(20));`}
-          </pre>
+          </div>
 
           <div className="output">
             Output: 1
@@ -54,11 +54,11 @@ console.log(arr.indexOf(20));`}
             Returns the index of the last occurrence of an element.
           </p>
 
-          <pre className="code">
+          <div className="code">
 {`const arr = [10, 20, 30, 20];
 
 console.log(arr.lastIndexOf(20));`}
-          </pre>
+          </div>
 
           <div className="output">
             Output: 3

@@ -1,0 +1,323 @@
+<script>
+
+
+// Task 1
+// Create a student profile using Template Literals and display the student's name, course, city, and institute in a formatted output.
+
+const name="Godson"
+const course="Backend"
+const city="chennai"
+const institute="SLA"
+
+console.log(`
+name:${name}
+course:${course}
+city:${city}
+institute:${institute}
+`)
+
+
+// Task 2
+// Create an Arrow Function that accepts employee details and calculates the yearly salary from the monthly salary.
+
+
+const calculateYearlySalary=(salary)=>{
+    return salary*12
+}
+
+const lpa=calculateYearlySalary(50000)
+console.log("Yearly salary:",lpa)
+
+
+// Task 3
+// Create an Arrow Function that accepts a product price and discount percentage and returns the final discounted price.
+
+
+const discountedPrice=(price,discount)=>{
+    return price-(price*discount/100)
+}
+
+const price=discountedPrice(10000,10)
+console.log("discounted price:",price);
+
+// Task 4
+// Create a user registration function using Default Parameters. If no role is provided, automatically assign a default role.
+
+const userRegistration=(role="Fullstack Developer")=>{
+
+    return role;
+}
+
+const role=userRegistration()
+console.log("Role:",role)
+
+
+// Task 5
+// Create a shopping cart function using Rest Parameters that accepts multiple product prices and calculates the total bill amount.
+
+const calculateTotalBill=(...price)=>{
+    let totalPrice=0
+    for(let p of price)
+    {
+        totalPrice+=p
+    }
+    return totalPrice
+
+}
+
+const totalBill=calculateTotalBill(100,200,300,400)
+console.log("Total bill amount:",totalBill)
+
+
+// Task 6
+// Given two arrays containing frontend and backend technologies, merge them into a single array using the Spread Operator.
+
+const frontend=["HTML5","CSS3","REACT"]
+const backend=["JS6+","Node","Express"]
+
+const fullstack=[...frontend,...backend]
+console.log("Merged Array:",fullstack);
+
+
+// Task 7
+// Create a copy of an employee object and add new properties such as department, experience, and salary without modifying the original object.
+
+const employee={
+    name:"Godson",
+    age:21,
+    institute:"SLA"
+}
+
+const newEmployee={
+    ...employee,
+    department:"Computer Science",
+    experience:"Fresher",
+    salary:30000
+}
+
+console.log("Original object:",employee);
+console.log("Modified object:",newEmployee);
+
+
+// Task 8
+// Given a student object containing multiple properties, extract all values into separate variables using Object Destructuring and display them.
+
+const student={
+    studentName:"Godson",
+    age:21,
+    degree:"B.E",
+    department:"Computer Science"
+}
+
+const {studentName,age,degree,department}=student
+console.log(`
+Student Details
+name:${studentName}
+age:${age}
+degree:${degree}
+department:${department}
+`)
+// Task 9
+// Create an object using Enhanced Object Literals without manually assigning property names and values.
+
+const productName="TV"
+const productColor="black"
+const productPrice=15000
+
+const product={
+    productName,
+    productColor,
+    productPrice
+}
+console.log("Product details:",product)
+// Task 10
+// Create a user dashboard system that safely accesses nested properties such as profile, address, and city using Optional Chaining and displays a default value using Nullish Coalescing when data is unavailable.
+
+const dashboard={
+    profile:"Godson",
+    address:{
+            city:"Chennai",
+            pincode:600028
+    },
+    
+}
+console.log("profile:",dashboard?.profile??"Data not available")
+console.log("city:",dashboard?.address?.city??"Data not available")
+console.log("Phone:",dashboard?.phone)
+console.log("blood group:",dashboard?.bloodGroup??"Data not available")
+
+
+
+// Task 11
+// Create a function that accepts multiple student marks using Rest Parameters and returns the highest mark.
+
+const highestMark=(...marks)=>{
+    let max=marks[0]
+    for(let mark of marks)
+    {
+        if(mark>max)
+        {
+            max=mark
+        }
+    }
+    return max
+}
+const maxMark=highestMark(96,80,95,99,88)
+console.log("Highest Mark:",maxMark);
+
+
+// Task 12
+// Create a function that merges multiple arrays of courses into a single array using the Spread Operator.
+
+const frontendCourses=["HTML","CSS","React"]
+const backkendCourses=["JS","Node","Express"]
+const dataAnalyticsCources=["Numpy","Pandas","Powerbi"]
+
+const allCourses=[...frontendCourses,...backkendCourses,...dataAnalyticsCources]
+console.log("All courses:",allCourses)
+
+// Task 13
+// Create a function that clones a product object and updates the stock quantity without modifying the original object.
+
+const modifyObject=(obj)=>{
+    const newObj={
+        ...obj,
+        stockQuantity:50
+    }
+    return newObj
+}
+const stockDetails={
+    name:"Stock",
+    profit:10000,
+    loss:0,
+    stockQuantity:15
+}
+console.log("before modification:",stockDetails);
+
+const newobj=modifyObject(stockDetails)
+console.log("modified object:",newobj);
+
+
+// Task 14
+// Create a function that receives a user object and displays user information using Object Destructuring and Template Literals.
+
+const displayUserInformation=(obj)=>{
+    const{name,age,role}=obj
+    console.log(`
+    user details:
+    name:${name}
+    age:${age}
+    role:${role}
+    `)
+}
+const user={
+    name:"Godson",
+    age:21,
+    role:"Fullstack Developer"
+}
+displayUserInformation(user)
+
+
+// Task 15
+// Build a mini Employee Management System using only ES6+ features such as:
+// Arrow Functions
+// Template Literals
+// Destructuring
+// Spread Operator
+// Rest Parameters
+// Default Parameters
+// Optional Chaining
+// Nullish Coalescing
+// Enhanced Object Literals
+// and implement:
+// Add Employee
+// Update Employee
+// Display Employee
+// Calculate Salary
+
+
+
+
+// Employee Management System
+
+let employees = [];
+
+
+const addEmployee = (id,name,department="Trainee",monthlySalary=15000)=>   // Default Parameters   // Arrow Functions
+{
+    const employee = {
+        id,
+        name,
+        department,
+        monthlySalary
+    };  // Enhanced Object Literals
+
+    employees = [...employees, employee]; // Spread Operator
+    console.log(`${name} added successfully.`);  // Template Literals
+};
+
+const updateEmployee = (id, updates) => {
+
+    employees = employees.map((emp)=>emp.id==id ? {...emp,...updates}: emp); //Ternary Operator
+
+    console.log(`Employee ${id} updated successfully.`);
+};
+
+
+const displayEmployee = (id) =>
+{
+    const employee=employees.find((emp)=>emp.id==id);
+    if (!employee) {
+        console.log("Employee not found");
+        return;
+    }
+
+    const {name,department,monthlySalary}=employee; // Destructuring
+
+    console.log(`
+Employee Details
+id: ${employee?.id ?? "Data not available"}  
+name: ${name}
+department: ${department ?? "Data not available"}
+Salary: ₹${monthlySalary}
+`);
+};  // Optional Chaining  // Nullish Coalescing
+
+
+const calculateSalary = (monthlySalary) =>   
+{
+    return monthlySalary * 12;
+       
+};
+
+const calculateTotalSalary =(...salaries)=>{   // Rest Parameters
+    let total = 0;
+    for (let salary of salaries) {
+        total += salary;
+    }
+    return total;
+};
+
+
+
+addEmployee(101, "Godson", "Backend", 50000);
+addEmployee(102, "Darwin", "Frontend", 40000);
+addEmployee(103, "Joel"); // Default Parameters
+
+
+
+displayEmployee(101);
+displayEmployee(102);
+displayEmployee(103);
+
+
+updateEmployee(103, {department: "Full Stack",monthlySalary: 45000});
+
+displayEmployee(103);
+
+
+console.log(`Annual Salary: ₹${calculateSalary(50000)}`);
+
+console.log("Total Monthly Salary:",calculateTotalSalary(50000,40000,45000));
+
+</script>

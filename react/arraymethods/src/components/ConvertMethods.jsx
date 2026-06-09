@@ -15,13 +15,13 @@ const ConvertMethods = () => {
             Converts all array elements into a string using a specified separator.
           </p>
 
-          <pre className="code">
+          <div className="code">
 {`const arr = ["HTML", "CSS", "JavaScript"];
 
 const result = arr.join(" - ");
 
 console.log(result);`}
-          </pre>
+          </div>
 
           <div className="output">
             Output: HTML - CSS - JavaScript
@@ -36,13 +36,13 @@ console.log(result);`}
             Converts an array into a comma-separated string.
           </p>
 
-          <pre className="code">
+          <div className="code">
 {`const arr = ["HTML", "CSS", "JavaScript"];
 
 const result = arr.toString();
 
 console.log(result);`}
-          </pre>
+          </div>
 
           <div className="output">
             Output: HTML,CSS,JavaScript

@@ -12,11 +12,11 @@ const CreationMethods = () => {
 
           <p>Creates an array using square brackets.</p>
 
-          <pre className="code">
+          <div className="code">
 {`const arr = [1, 2, 3];
 
 console.log(arr);`}
-          </pre>
+          </div>
 
           <div className="output">
             Output: [1, 2, 3]
@@ -28,11 +28,11 @@ console.log(arr);`}
 
           <p>Creates an array using the Array constructor.</p>
 
-          <pre className="code">
+          <div className="code">
 {`const arr = new Array(1, 2, 3);
 
 console.log(arr);`}
-          </pre>
+          </div>
 
           <div className="output">
             Output: [1, 2, 3]
@@ -44,11 +44,11 @@ console.log(arr);`}
 
           <p>Creates an array from an iterable object.</p>
 
-          <pre className="code">
+          <div className="code">
 {`const arr = Array.from("HELLO");
 
 console.log(arr);`}
-          </pre>
+          </div>
 
           <div className="output">
             Output: ['H','E','L','L','O']
@@ -60,11 +60,11 @@ console.log(arr);`}
 
           <p>Creates an array from the given arguments.</p>
 
-          <pre className="code">
-{`const arr = Array.of(5);
+          <div className="code">
+{`const arr = Array.of(5); \n
 
 console.log(arr);`}
-          </pre>
+          </div>
 
           <div className="output">
             Output: [5]

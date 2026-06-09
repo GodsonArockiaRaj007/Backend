@@ -15,13 +15,13 @@ const HigherOrderMethods = () => {
             Creates a new array by applying a function to each element.
           </p>
 
-          <pre className="code">
+          <div className="code">
 {`const arr = [1, 2, 3];
 
 const result = arr.map(num => num * 2);
 
 console.log(result);`}
-          </pre>
+          </div>
 
           <div className="output">
             Output: [2, 4, 6]
@@ -36,13 +36,13 @@ console.log(result);`}
             Creates a new array with elements that satisfy a condition.
           </p>
 
-          <pre className="code">
+          <div className="code">
 {`const arr = [10, 20, 30, 40];
 
 const result = arr.filter(num => num > 20);
 
 console.log(result);`}
-          </pre>
+          </div>
 
           <div className="output">
             Output: [30, 40]
@@ -57,13 +57,13 @@ console.log(result);`}
             Returns the first element that satisfies a condition.
           </p>
 
-          <pre className="code">
+          <div className="code">
 {`const arr = [10, 20, 30, 40];
 
 const result = arr.find(num => num > 20);
 
 console.log(result);`}
-          </pre>
+          </div>
 
           <div className="output">
             Output: 30
@@ -78,7 +78,7 @@ console.log(result);`}
             Reduces the array to a single value.
           </p>
 
-          <pre className="code">
+          <div className="code">
 {`const arr = [1, 2, 3, 4];
 
 const result = arr.reduce(
@@ -87,7 +87,7 @@ const result = arr.reduce(
 );
 
 console.log(result);`}
-          </pre>
+          </div>
 
           <div className="output">
             Output: 10
@@ -102,13 +102,13 @@ console.log(result);`}
             Checks if at least one element satisfies a condition.
           </p>
 
-          <pre className="code">
+          <div className="code">
 {`const arr = [10, 20, 30];
 
 const result = arr.some(num => num > 25);
 
 console.log(result);`}
-          </pre>
+          </div>
 
           <div className="output">
             Output: true
@@ -123,13 +123,13 @@ console.log(result);`}
             Checks if all elements satisfy a condition.
           </p>
 
-          <pre className="code">
+          <div className="code">
 {`const arr = [10, 20, 30];
 
 const result = arr.every(num => num > 5);
 
 console.log(result);`}
-          </pre>
+          </div>
 
           <div className="output">
             Output: true
@@ -144,7 +144,7 @@ console.log(result);`}
             Maps each element and flattens the result into a new array.
           </p>
 
-          <pre className="code">
+          <div className="code">
 {`const arr = [1, 2, 3];
 
 const result = arr.flatMap(
@@ -152,7 +152,7 @@ const result = arr.flatMap(
 );
 
 console.log(result);`}
-          </pre>
+          </div>
 
           <div className="output">
             Output: [1, 2, 2, 4, 3, 6]
