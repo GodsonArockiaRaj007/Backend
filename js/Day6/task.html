@@ -1,0 +1,100 @@
+<script>
+    //Task 1 - Student Data Loading
+
+  const getStudent= new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve("Godson")
+            },2000)
+        })
+    getStudent.then((res)=>{console.log(res);})
+   
+
+
+    //Task 2 - Employee Details
+
+        const getEmployee= new Promise((resolve,reject)=>{
+            setTimeout(() => {
+                resolve({id:1,name:"Godson",role:"Student"})
+            }, 3000);
+        })
+        getEmployee.then((res)=>{console.log(res);
+        })
+
+
+    // Task 3 - Login System
+
+        const login=new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve("Login Success")
+            },2000)
+        })
+        login.then((res)=>{console.log(res)})
+
+
+    // Task 4 - Product Loading
+
+        const getProducts=new Promise((resolve,reject)=>{
+            setTimeout(() => {
+                resolve(["Laptop","Mobile","Keyboard"])
+            }, 2000);
+        })
+        getProducts.then((res)=>{console.log(res);})
+
+
+
+    // Task 5 - Food Delivery System
+
+        const orderFood=new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve("Pizza Delivered")
+            },4000)
+        })
+        orderFood.then((res)=>{console.log(res);})
+
+
+    // Task 6 - Callback Hell to Promise Chain
+
+       const getUser = () => {
+        return new Promise((resolve,reject) => {
+                resolve();
+        });
+    };
+
+    const getOrders = () => {
+        return new Promise((resolve,reject) => {
+                resolve();
+        });
+    };
+
+    const getPayments = () => {
+        return new Promise((resolve,reject) => {
+              resolve();
+        });
+    };
+
+    getUser().then(() => getOrders())
+        .then(() => getPayments())
+        .then(() => console.log("Completed"))
+        .catch((error) => console.log(error));
+
+
+
+
+    // Bonus Task 7 - Success & Failure Handling
+
+        const payment=new Promise((resolve,reject)=>{
+            const status =true
+            if(status)
+            {
+                resolve("Payment Success")
+            }
+            else
+            {
+                reject("Payment Failed")
+            }
+        })
+        payment.then((res)=>{console.log(res);
+        }).catch((err)=>{console.log(err);
+        })
+        
+</script>
